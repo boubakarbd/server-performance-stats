@@ -1,60 +1,37 @@
-# Exercice4
+# Server Stats Script
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+Ce script Bash permet de surveiller les performances d'un serveur Linux en affichant des statistiques clés telles que l'utilisation du CPU, de la mémoire, du disque, ainsi que les processus les plus gourmands en ressources.
 
-## Development server
+## Fonctionnalités
 
-To start a local development server, run:
+- **CPU Usage** : Affiche le pourcentage d'utilisation du CPU.
+- **Memory Usage** : Affiche la mémoire totale, utilisée et libre en Go, ainsi que les pourcentages correspondants.
+- **Disk Usage** : Affiche l'utilisation du disque pour la partition racine (`/`), y compris l'espace total, utilisé et libre.
+- **Top 5 Processes** : Liste les 5 processus les plus gourmands en CPU et en mémoire.
 
-```bash
-ng serve
-```
+## Technologies utilisées
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Langage** : Bash
+- **Outils Linux** : `mpstat`, `free`, `df`, `ps`, `awk`, `sed`
 
-## Code scaffolding
+## Prérequis
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Un système d'exploitation Linux.
+- Les outils suivants doivent être installés :
+  - `mpstat` (disponible via le paquet `sysstat`).
+  - `awk`, `sed`, `free`, `df`, `ps` (généralement préinstallés sur la plupart des distributions Linux).
 
-```bash
-ng generate component component-name
-```
+## Installation
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. Téléchargez ou clonez le dépôt :
+   ```bash
+   git clone https://github.com/boubakarbd/server-performance-stats.git
+   cd server-stats
 
-```bash
-ng generate --help
-```
+2. Rendez le script exécutable :
 
-## Building
+chmod +x server-stats.sh
 
-To build the project run:
+3. Exécutez le script:
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# server-performance-stats
+./server-stats.sh
