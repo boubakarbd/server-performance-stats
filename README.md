@@ -39,4 +39,3 @@ Ce script Bash permet de surveiller les performances d'un serveur Linux en affic
    ```bash
    ./server-stats.sh
    ```
-```
