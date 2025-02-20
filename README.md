@@ -21,17 +21,22 @@ Ce script Bash permet de surveiller les performances d'un serveur Linux en affic
   - `mpstat` (disponible via le paquet `sysstat`).
   - `awk`, `sed`, `free`, `df`, `ps` (généralement préinstallés sur la plupart des distributions Linux).
 
+
 ## Installation
 
-1. Téléchargez ou clonez le dépôt :
+1. Download or clone the repository:
    ```bash
    git clone https://github.com/boubakarbd/server-performance-stats.git
    cd server-stats
+   ```
 
-2. Rendez le script exécutable :
-```bash
-chmod +x server-stats.sh
+2. Make the script executable:
+   ```bash
+   chmod +x server-stats.sh
+   ```
 
-3. Exécutez le script:
-```bash
-./server-stats.sh
+3. Run the script:
+   ```bash
+   ./server-stats.sh
+   ```
+```
