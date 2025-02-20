@@ -29,9 +29,9 @@ Ce script Bash permet de surveiller les performances d'un serveur Linux en affic
    cd server-stats
 
 2. Rendez le script exécutable :
-
+```bash
 chmod +x server-stats.sh
 
 3. Exécutez le script:
-
+```bash
 ./server-stats.sh
